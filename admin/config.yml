@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: vijayandeepu449-max/SYD_INTERIORS_EDITABLE_FULL
+  name: git-gateway
   branch: main
 
 media_folder: "images"
