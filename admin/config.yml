@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: vijayandeepu449-max/SYD_INTERIORS_EDITABLE_FULL
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    slug: "{{slug}}"
+    format: "json"
+    extension: "json"
+    fields:
+      - {label: "Project Title", name: "title", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
