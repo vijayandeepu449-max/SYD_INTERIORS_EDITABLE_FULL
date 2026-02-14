@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SYD INTERIORS | Luxury Interior Designers in Bangalore</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+margin:0;
+background:#0a0a0a;
+color:#fff;
+}
+nav{
+background:#000;
+padding:20px;
+text-align:center;
+}
+nav h1{
+font-family:'Playfair Display',serif;
+color:#c19b6b;
+margin:0;
+}
+section{padding:60px 10%;}
+.grid{
+column-count:3;
+column-gap:20px;
+}
+@media(max-width:900px){.grid{column-count:2;}}
+@media(max-width:600px){.grid{column-count:1;}}
+.grid img{
+width:100%;
+margin-bottom:20px;
+border-radius:15px;
+}
+footer{
+text-align:center;
+padding:30px;
+background:#000;
+color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h1>SYD INTERIORS</h1>
+</nav>
+
+<section>
+<h2>Our Projects</h2>
+<div class="grid" id="portfolio"></div>
+</section>
+
+<footer>
+© 2026 SYD INTERIORS | +91 82978 16163
+</footer>
+
+<script>
+fetch('/projects/index.json')
+.then(res=>res.json())
+.then(data=>{
+const container=document.getElementById("portfolio");
+data.forEach(project=>{
+let img=document.createElement("img");
+img.src=project.image;
+container.appendChild(img);
+});
+});
+</script>
+
+</body>
+</html>
