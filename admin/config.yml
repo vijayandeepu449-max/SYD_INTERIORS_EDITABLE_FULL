@@ -10,11 +10,8 @@ collections:
     label: "Projects"
     folder: "projects"
     create: true
-    slug: "{{slug}}"
     format: "json"
     extension: "json"
     fields:
-      - {label: "Project Title", name: "title", widget: "string"}
-
-      - {label: "Image", name: "image", widget: "image"}
-
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
