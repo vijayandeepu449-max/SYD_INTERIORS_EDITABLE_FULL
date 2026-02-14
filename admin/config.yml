@@ -16,5 +16,6 @@ collections:
     extension: "json"
     fields:
       - {label: "Project Title", name: "title", widget: "string"}
+
       - {label: "Image", name: "image", widget: "image"}
 
