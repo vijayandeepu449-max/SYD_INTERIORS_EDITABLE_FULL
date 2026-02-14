@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,6 +60,7 @@ color:#aaa;
 © 2026 SYD INTERIORS | +91 82978 16163
 </footer>
 
+<!-- Load Projects -->
 <script>
 fetch('/projects/index.json')
 .then(res=>res.json())
@@ -72,6 +72,20 @@ img.src=project.image;
 container.appendChild(img);
 });
 });
+</script>
+
+<!-- Netlify Identity (VERY IMPORTANT FOR ADMIN PANEL) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
 </script>
 
 </body>
